@@ -1,16 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="container">
+      <List />
+    </div>
   </div>
 </template>
 
 <script>
+import List from "./components/List";
+
 export default {
   name: "App",
+
+  components: { List },
 };
 </script>
 
 <style lang="scss">
-@import "";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f7f8fa;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 </style>
